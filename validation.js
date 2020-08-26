@@ -137,7 +137,7 @@ let required = property => {
       `Must be character in thai and english language, number and special character is -`;
   };
   
-  export default {
+  module.exports = {
     required,
     numberOnly,
     minValue,
