@@ -1,6 +1,6 @@
 {
   "name": "validation_useable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Test Package!",
   "main": "validation.js",
   "repository": {
