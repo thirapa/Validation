@@ -1,0 +1,23 @@
+{
+  "name": "validation",
+  "version": "1.0.0",
+  "description": "Test Package!",
+  "main": "validation.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thirapa/Validation.git"
+  },
+  "keywords": [
+    "validation",
+    "package",
+    "javascript",
+    "validate",
+    "validation_package"
+  ],
+  "author": "Thirapa",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/thirapa/Validation/issues"
+  },
+  "homepage": "https://github.com/thirapa/Validation#readme"
+}
