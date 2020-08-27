@@ -123,9 +123,9 @@ let required = property => {
     }
   };
   
-  let fixNumber = (value1, value2) => {
+  let fixNumber = (property, value1, value2) => {
     if (parseInt(value2) < parseInt(value1)) {
-      return `Number must be more than Fix Number field`;
+      return `Number must be more than ${property} field`;
     } else {
       return true;
     }
