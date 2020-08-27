@@ -165,6 +165,7 @@ let required = property => {
     idcard,
     idcard2,
     fixNumber,
-    text
+    text,
+    text_num
   };
   
