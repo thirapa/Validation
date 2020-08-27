@@ -130,17 +130,17 @@ let required = property => {
       return true;
     }
   };
-  
+
+  let text = () => {
+    return v =>
+      /^[a-zA-Zก-ฮะ-์-/;.,_()\s]+$/.test(v) ||
+      `Must be character in thai and english language and have special character is - / ; . , _ ()`;
+  };
+
   let text_num = () => {
     return v =>
       /^[a-zA-Z0-9ก-ฮะ-์-/;.,_()\s]+$/.test(v) ||
       `Must be character in thai and english language, number and special character is - / ; . , _ ()`;
-  };
-
-  let text= () => {
-    return v =>
-      /^[a-zA-Zก-ฮะ-์-/;.,_()\s]+$/.test(v) ||
-      `Must be character in thai and english language and have special character is - / ; . , _ ()`;
   };
   
   module.exports = {
