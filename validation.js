@@ -28,17 +28,17 @@ let required = property => {
   
   let engLangOnly = () => {
     return v =>
-      /^[a-zA-Z]+$/.test(v) || `Must be character in english language only`;
+      /^[a-zA-Z\s]+$/.test(v) || `Must be character in english language only`;
   };
   
   let thaiLangOnly = () => {
     return v =>
-      /^[ก-ฮะ-์]+$/.test(v) || `Must be character in thai language only`;
+      /^[ก-ฮะ-์\s]+$/.test(v) || `Must be character in thai language only`;
   };
   
   let thai_engLanguage = property => {
     return v =>
-      /^[a-zA-Zก-ฮะ-์]+$/.test(v) ||
+      /^[a-zA-Zก-ฮะ-์\s]+$/.test(v) ||
       `${property} must be characters in thai language and english language only`;
   };
   
@@ -131,10 +131,16 @@ let required = property => {
     }
   };
   
-  let text_Eng = () => {
+  let text_num = () => {
     return v =>
-      /^[a-zA-Z0-9ก-ฮะ-์-]+$/.test(v) ||
-      `Must be character in thai and english language, number and special character is -`;
+      /^[a-zA-Z0-9ก-ฮะ-์-/;.,_()\s]+$/.test(v) ||
+      `Must be character in thai and english language, number and special character is - / ; . , _ ()`;
+  };
+
+  let text= () => {
+    return v =>
+      /^[a-zA-Zก-ฮะ-์-/;.,_()\s]+$/.test(v) ||
+      `Must be character in thai and english language and have special character is - / ; . , _ ()`;
   };
   
   module.exports = {
@@ -159,6 +165,6 @@ let required = property => {
     idcard,
     idcard2,
     fixNumber,
-    text_Eng
+    text
   };
   
