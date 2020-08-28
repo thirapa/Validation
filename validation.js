@@ -3,7 +3,7 @@ let required = property => {
   };
   
   let numberOnly = () => {
-    return v => /^[\d]+$/.test(v) || `Must have one number`;
+    return v => /^[\d]+$/.test(v) || `Must be number only`;
   };
   
   let maxStart = propertyFinished => {
