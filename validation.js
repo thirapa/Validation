@@ -1,4 +1,4 @@
-let required = property => {
+  let required = property => {
     return v => !!v || `${property} is required`;
   };
   
