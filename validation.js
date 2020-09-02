@@ -112,9 +112,7 @@
   let idcard2 = property => {
     if (property.substring(0, 1) == 0) {
       return false;
-    } else if (property.length != 13) {
-      return false;
-    }
+    } 
     for (var i = 0, sum = 0; i < 12; i++) {
       sum += parseInt(property.charAt(i)) * (13 - i);
     }
