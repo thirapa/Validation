@@ -85,7 +85,7 @@
   
   let idCard = () => {
     return v =>
-      /^(([0-9])*-([0-9]{4})*-([0-9]{5})*-([0-9]{2})*-([0-9]{1}))+$|^(([0-9])([0-9]{4})([0-9]{5})([0-9]{2})([0-9]{1}))+$/.test(
+      /^(([0-9])*-([0-9]{4})*-([0-9]{5})*-([0-9]{2})*-([0-9]{1}))+$|^([0-9]{13})+$/.test(
         v
       ) || `Id Card must have 13 numbers (XXXXXXXXXXXXX)`;
   };
@@ -122,7 +122,7 @@
   };
   
   let fixNumber = (property1, property2, value1, value2) => {
-    if (parseInt(value2) <= parseInt(value1)) {
+    if (parseInt(value2) < parseInt(value1)) {
       return `${property1} must be more than ${property2} field`;
     } else {
       return true;
